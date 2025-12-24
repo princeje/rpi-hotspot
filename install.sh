@@ -1,6 +1,5 @@
 
 #!/bin/bash
-RPI-HOTSPOT_VER="0.1.0"
 AP_WIRELESS_NIC="wlan0"
 WIRELESS_CLIENT_NIC="wlan1"
 HOTSPOT_PORT="8080"
@@ -13,6 +12,7 @@ HOTSPOT_PWD="password"
 # DO NOT CHANGE BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
 #
 # ----------------------------------------------------------------------------------------------------
+RPI_HOTSPOT_VER="0.1.0"
 SERVICE_FILE="/etc/systemd/system/rpi-hotspot-manager.service"
 
 SCRIPT_NAME="rpi_hotspot_env.sh"
