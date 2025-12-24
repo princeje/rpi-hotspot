@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bluer Plus WiFi Setup</title>
+<link href="http://192.168.4.1/static/bootstrap.min.csss/bootstrap.min.css" rel="stylesheet">
+
+<style>
+#loading {
+  display: none;
+}
+</style>
+</head>
+
+<body class="d-flex align-items-center min-vh-100 bg-light">
+
+<div class="container-fluid px-3">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+
+      <h2 class="text-center mb-4">Bluer Plus WiFi Setup</h2>
+
+      
+
+      <form method="post" onsubmit="startLoading()">
+
+        <div id="formFields">
+
+          <div class="mb-3">
+            <label class="form-label">Network</label>
+            <select name="ssid" class="form-select form-select-lg" required>
+              <option value="--">--</option><option value="7503Hawks">7503Hawks</option><option value="ATT5y38kqV">ATT5y38kqV</option><option value="BluerHotspot">BluerHotspot</option><option value="CASAPEREIRA">CASAPEREIRA</option><option value="Fudgemann">Fudgemann</option><option value="IN-USE  SSID">IN-USE  SSID</option><option value="Kelly">Kelly</option><option value="NETGEAR94">NETGEAR94</option><option value="PNR08IF3105BAF40AD">PNR08IF3105BAF40AD</option><option value="THEWhiteHouse">THEWhiteHouse</option><option value="THEWhiteHouse _Guest">THEWhiteHouse _Guest</option><option value="THEWhiteHouse _IoT">THEWhiteHouse _IoT</option><option value="TMOBILE-BB80">TMOBILE-BB80</option><option value="Teitsort L Wi-Fi">Teitsort L Wi-Fi</option><option value="The-Whitehouse">The-Whitehouse</option><option value="TheCastle">TheCastle</option><option value="TheCastle-5G-1">TheCastle-5G-1</option><option value="TheCastle-IoT">TheCastle-IoT</option><option value="VR121-9334">VR121-9334</option><option value="rowland2.4">rowland2.4</option><option value="xfinitywifi">xfinitywifi</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <div class="input-group input-group-lg">
+              <input type="password" name="psk" id="psk" class="form-control">
+              <button type="button" class="btn btn-outline-secondary"
+                onclick="togglePassword()">👁</button>
+            </div>
+          </div>
+
+          <button id="connectBtn" class="btn btn-success btn-lg w-100">
+            Connect
+          </button>
+
+        </div>
+
+        <div id="loading" class="text-center mt-4">
+          <div class="spinner-border text-success" role="status"></div>
+          <div class="mt-3 fs-5">Connecting…</div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function togglePassword() {
+  const p = document.getElementById("psk");
+  p.type = p.type === "password" ? "text" : "password";
+}
+
+function startLoading() {
+  document.getElementById("formFields").style.display = "none";
+  document.getElementById("loading").style.display = "block";
+}
+</script>
+
+</body>
+</html>
