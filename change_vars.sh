@@ -7,6 +7,7 @@ GO_TO_BUTTON_TEXT="Go to Website"
 HOTSPOT_NAME="RPi AP"
 HOTSPOT_PWD="password"
 
+RPI_HOTSPOT_VER="0.1.0"
 SCRIPT_NAME="rpi_hotspot_env.sh"
 echo "Creating system-wide environment script in /etc/profile.d..."
 sudo tee /etc/profile.d/${SCRIPT_NAME} > /dev/null << EOF
@@ -17,4 +18,5 @@ export TITLE_TEXT="${TITLE_TEXT}"
 export GO_TO_BUTTON_TEXT="${GO_TO_BUTTON_TEXT}"
 export HOTSPOT_NAME="${HOTSPOT_NAME}"
 export HOTSPOT_PWD="${HOTSPOT_PWD}"
+export RPI_HOTSPOT_VER="${RPI_HOTSPOT_VER}"
 EOF

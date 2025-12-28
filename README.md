@@ -4,7 +4,7 @@
   <img src="images/index.png" alt="Connected" width="300" />
 </p>
 
-A simple way to create an AP hotspot on a Raspberry Pi automatically with a captive portal and configure a WiFi connection a web ui interface.
+A simple way to create an AP hotspot on a Raspberry Pi automatically with a captive portal and configure a WiFi connection via a web browser.
 ## How it works ❓
 **This requires TWO WIRELESS INTERFACES** one to host the AP and one to connect to your WiFi. This is designed to run on boot, and look for internet connection. If the device is not connected to the internet a wireless AP is created and traffic from the AP nic with a destination to port `80` is redirected to port `8080` (this is to prevent conflicts with a webserver if one is running on the device). Once you connect to the AP, it will ask you to sign in and redirect you to the captive page now available at `http://<hostname>.local`. This webpage allows you to select a wifi and connect to it using the other wireless nic on your device. After successful connection the AP is disabled, the rule to forward AP traffic from `8080 -> 80` is removed, and the wifi configuration webpage stays active on `http://<hostname>.local:8080`. If you reboot, and the device has internet, the AP does not get turned on but the wifi configuration webpage is still active in the background on port `8080`
 
