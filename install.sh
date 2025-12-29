@@ -27,6 +27,7 @@ export TITLE_TEXT="${TITLE_TEXT}"
 export GO_TO_BUTTON_TEXT="${GO_TO_BUTTON_TEXT}"
 export HOTSPOT_NAME="${HOTSPOT_NAME}"
 export HOTSPOT_PWD="${HOTSPOT_PWD}"
+export RPI_HOTSPOT_VER="${RPI_HOTSPOT_VER}"
 EOF
 
 sudo apt-get update -y
